@@ -1,0 +1,1172 @@
+@font-face {
+  font-family: "Futura"; /* Name your font family */
+  src: url("./Fonts/FuturaCondensedExtraBold.otf") format("opentype"); /* Locate the .otf file within your directory*/
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Helvetica, Arial, sans-serif;
+}
+
+:root {
+  --padding-nav: 0 55px;
+  --padding-center-menu-content: 50px calc((100vw - 800px) / 2);
+  --home-pg-header-font-size: 3rem;
+  --letter-spacing-nike-font: -1.8px;
+  --left-margin: 1.5rem; /*left & bottom for photos with text and button on bottom left*/
+  --bottom-margin: 1.5rem;
+  --futura-font: "Futura", Helvetica, Arial, sans-serif;
+}
+
+.top-menu {
+  display: flex;
+  height: 36px;
+  justify-content: space-between;
+  align-items: center;
+  /* padding: 0 var(--padding-nav); */
+  background-color: #f5f5f5;
+}
+
+.top-menu .logos img {
+  height: 30px;
+  width: auto;
+}
+
+.top-menu ul {
+  display: flex;
+  list-style-type: none;
+}
+
+.top-menu ul li {
+  margin-right: 5px;
+}
+
+.top-menu a {
+  text-decoration: none;
+  color: #000;
+  font-size: 12px;
+}
+
+.top-menu a:hover {
+  color: rgb(177, 177, 177);
+}
+
+.center-main-menu {
+  display: flex;
+  justify-content: space-between;
+  width: 500px;
+  margin: 0 20px;
+}
+
+.bottom-menu {
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--padding-nav);
+  position: relative;
+}
+
+.bottom-menu-center li {
+  list-style-type: none;
+}
+
+.center-menu-header {
+  color: #000;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.bottom-menu-right {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.material-symbols-outlined {
+  color: #000;
+}
+
+.heart-icon,
+.bag-icon {
+  vertical-align: top;
+}
+
+.heart-icon {
+  padding: 0 10px;
+}
+
+.bag-icon {
+  padding-right: 10px;
+}
+
+.hamburger-menu {
+  display: none;
+  height: 35px;
+  width: 35px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.hamburger-menu .line {
+  position: relative;
+  height: 3px;
+  width: 20px;
+  background: rgba(0, 0, 0, 0.6);
+}
+
+.hamburger-menu .bar2 {
+  margin: 5px 0;
+}
+
+.hamburger-menu:hover {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  height: 35px;
+  width: 35px;
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.1);
+}
+
+.search {
+  background: none;
+  position: relative;
+}
+
+.search-icon {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 0;
+  border: none;
+  outline: none;
+  height: 37px;
+  width: 37px;
+  background: #f6f6f6;
+  border-radius: 50%;
+  z-index: 1;
+}
+
+.search-input {
+  width: 150px;
+  border-radius: 50px;
+  border: none;
+  outline: none;
+  background: #f6f6f6;
+  padding: 10px 0;
+  padding-left: 50px;
+}
+
+.search-icon:hover {
+  background-color: rgb(217, 216, 216);
+}
+
+.search-input:hover {
+  background-color: rgb(236, 236, 236);
+}
+
+.top-menu-right {
+  display: flex;
+}
+
+.top-menu-right li {
+  list-style-type: none;
+}
+
+.dropdown-content-help {
+  visibility: hidden;
+  opacity: 0;
+  position: absolute;
+  right: 100px;
+  top: 10px;
+  background-color: #fff;
+  border-radius: 5%;
+  min-width: 240px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  transition: top 0.3s ease-in, opacity 0.3s ease-in-out, visibility 0.3s;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+}
+
+/* .help-header-list {
+  border: 1px solid red;
+} */
+
+.help-header-list:hover .dropdown-content-help {
+  opacity: 1;
+  visibility: visible;
+  top: 30px;
+}
+
+.dropdown-content-help li a {
+  color: #000;
+  padding: 8px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content-help .help a {
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.bottom-menu {
+  max-height: 60px;
+}
+
+.center-menu-link {
+  padding: 20px 0;
+}
+
+.header {
+  list-style-type: none;
+}
+
+.center-menu-header {
+  text-decoration: none;
+  color: #000;
+}
+
+.center-menu-list a {
+  list-style: none;
+  text-decoration: none;
+  color: #646464;
+  font-size: 11px;
+  /* border: 2px solid lime; */
+}
+
+.center-menu-list a:hover {
+  color: #000;
+}
+
+.center-menu-header:hover {
+  border-bottom: 2px solid black;
+}
+
+.dropdown-content-new-feature {
+  visibility: hidden;
+  opacity: 0;
+  position: absolute;
+  top: 60px;
+  left: 0;
+  background-color: #fff;
+  width: 100%;
+  height: 300px;
+  transition: opacity 0.3s ease-in-out, visibility 0.3s;
+  z-index: 1;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.new-feature-header:hover .dropdown-content-new-feature {
+  opacity: 1;
+  visibility: visible;
+}
+
+.dropdown-content-men {
+  visibility: hidden;
+  opacity: 0;
+  position: absolute;
+  top: 60px;
+  left: 0;
+  background-color: #fff;
+  width: 100%;
+  height: 550px;
+  transition: opacity 0.3s ease-in-out, visibility 0.3s;
+  z-index: 2;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.men-header:hover .dropdown-content-men {
+  opacity: 1;
+  visibility: visible;
+}
+
+.dropdown-content-women {
+  visibility: hidden;
+  opacity: 0;
+  position: absolute;
+  top: 60px;
+  left: 0;
+  background-color: #fff;
+  width: 100%;
+  height: 575px;
+  transition: opacity 0.3s ease-in-out, visibility 0.3s;
+  z-index: 2;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.women-header:hover .dropdown-content-women {
+  opacity: 1;
+  visibility: visible;
+}
+
+.dropdown-content-kids {
+  visibility: hidden;
+  opacity: 0;
+  position: absolute;
+  top: 60px;
+  left: 0;
+  background-color: #fff;
+  width: 100%;
+  height: 550px;
+  transition: opacity 0.3s ease-in-out, visibility 0.3s;
+  z-index: 2;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.kids-header:hover .dropdown-content-kids {
+  opacity: 1;
+  visibility: visible;
+}
+
+.dropdown-content-jordan {
+  visibility: hidden;
+  opacity: 0;
+  position: absolute;
+  top: 60px;
+  left: 0;
+  background-color: #fff;
+  width: 100%;
+  height: 330px;
+  transition: opacity 0.3s ease-in-out, visibility 0.3s;
+  z-index: 2;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.jordan-header:hover .dropdown-content-jordan {
+  opacity: 1;
+  visibility: visible;
+}
+
+.bottom-menu-center .header {
+  font-weight: bold;
+}
+
+.menu-icons {
+  display: flex;
+}
+
+.heart-icon:hover {
+  color: #f00;
+}
+
+.bag-icon:hover {
+  color: #646464;
+}
+
+.home-main-image-container {
+  /* 530px */
+  height: auto;
+  /* border: 1px solid blue; */
+  width: 100%;
+}
+
+.home-main-image-container .img-home-main {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.dropdown-content-new-feature .header,
+.dropdown-content-men .header,
+.dropdown-content-women .header,
+.dropdown-content-kids .header,
+.dropdown-content-jordan .header {
+  font-weight: 550;
+  color: #000;
+  font-size: 13px;
+  padding-bottom: 10px;
+  /* border: 1px solid red; */
+}
+
+.dropdown-content-new-feature .main-list-header,
+.dropdown-content-men .main-list-header,
+.dropdown-content-women .main-list-header,
+.dropdown-content-kids .main-list-header,
+.dropdown-content-jordan .main-list-header {
+  margin-bottom: 15px;
+}
+
+.dropdown-content-new-feature .header:hover,
+.dropdown-content-men .header:hover,
+.dropdown-content-women .header:hover,
+.dropdown-content-kids .header:hover,
+.dropdown-content-jordan .header:hover {
+  color: #646464;
+}
+
+.center-menu-list {
+  margin-bottom: 8px;
+}
+
+.dropdown-content-new-feature .bottom-header,
+.dropdown-content-men .bottom-header,
+.dropdown-content-women .bottom-header,
+.dropdown-content-kids .bottom-header,
+.dropdown-content-jordan .bottom-header {
+  margin-top: 20px;
+  /* border: 1px solid purple; */
+}
+
+.dropdown-content-new-feature .col1 .center-menu-list:nth-child(2) {
+  /* border: 1px solid red; */
+  margin-bottom: 40px;
+}
+
+.main-image-info-container {
+  /* border: 1px solid red; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 290px;
+  width: 100%;
+}
+
+.main-image-info-container h1 {
+  font-family: var(--futura-font);
+  font-size: 4.5rem;
+  letter-spacing: var(--letter-spacing-nike-font);
+  margin-top: 25px;
+  margin-bottom: 0;
+}
+
+.main-image-info-container p {
+  font-family: Helvetica, Arial, sans-serif;
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.main-image-info-container .btn-shop-pegasus41 {
+  font-family: Helvetica, Arial, sans-serif;
+  font-weight: bold;
+  font-size: 1rem;
+  color: #fff;
+  background-color: #000;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 50px;
+}
+
+.main-image-info-container .btn-shop-pegasus41:hover {
+  opacity: 0.6;
+  cursor: pointer;
+}
+
+.main-quad-img-grid {
+  --num-cols: 2;
+  --num-rows: 2;
+  --row-height: 527px;
+  display: grid;
+  gap: 0;
+  grid-template-columns: repeat(var(--num-cols), 1fr);
+  grid-auto-rows: var(--row-height);
+  color: #fff;
+}
+
+.main-quad-img-grid button {
+  padding: 10px 18px;
+  border: none;
+  border-radius: 50px;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.main-quad-img-grid button:hover {
+  background-color: rgb(185, 185, 185);
+}
+
+.main-quad-img-grid .shoe-header {
+  font-size: 1.5rem;
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+
+.main-quad-img-grid img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.retro-kicks {
+  position: relative;
+}
+
+.retro-kicks .main-vomero-content {
+  position: absolute;
+  bottom: 0;
+  margin-left: var(--left-margin);
+  margin-bottom: var(--bottom-margin);
+}
+
+.freedom-stability {
+  position: relative;
+}
+
+.freedom-stability .main-free-metcon-6-content {
+  position: absolute;
+  bottom: 0;
+  margin-left: var(--left-margin);
+  margin-bottom: var(--bottom-margin);
+}
+
+.trending {
+  position: relative;
+}
+
+.trending .main-classic-bw-shoes-content {
+  position: absolute;
+  bottom: 0;
+  margin-left: var(--left-margin);
+  margin-bottom: var(--bottom-margin);
+}
+
+.new-arrivals {
+  position: relative;
+}
+
+.new-arrivals .main-air-jordan-4-oxdized-green-content {
+  position: absolute;
+  bottom: 0;
+  margin-left: var(--left-margin);
+  margin-bottom: var(--bottom-margin);
+}
+
+.new-this-week-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  height: 250px;
+}
+
+.new-this-week-content {
+  margin-bottom: 3rem;
+  text-align: center;
+}
+
+.new-this-week-container button {
+  padding: 10px 1rem;
+  margin-top: 1.2rem;
+  border: none;
+  border-radius: 50px;
+  background-color: #000;
+  color: #fff;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 1rem;
+}
+
+.new-this-week-container button:hover {
+  opacity: 0.6;
+}
+
+.new-this-week-content h1 {
+  font-size: var(--home-pg-header-font-size);
+  letter-spacing: var(--letter-spacing-nike-font);
+  font-family: var(--futura-font);
+}
+
+.collage-container {
+  display: grid;
+  grid-template-rows: 527px;
+  grid-template-columns: 1fr;
+}
+
+.collage-container img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.shop-by-classics-container {
+  height: 125px;
+  display: flex;
+  align-items: flex-end;
+}
+
+.shop-by-classics-container h2 {
+  /*Shop by classic header*/
+  font-family: var(--futura-font);
+  font-size: var(--home-pg-header-font-size);
+  margin-left: 2.8rem;
+}
+
+/* .home-pg-scrollable-img-container {
+  border: 1px solid lime; 
+} */
+
+/* .carousel button svg {
+  width: 20px;
+  height: 20px;
+ 
+}   */
+
+.carousel {
+  width: 300px;
+  overflow: hidden;
+  position: relative;
+  margin: 0 auto;
+  /* border: 1px solid red; */
+}
+
+.carousel-slide {
+  flex: 0 0 auto;
+  width: 300px;
+}
+
+/*  */
+.carousel-track {
+  /* ul */
+  display: flex;
+  gap: 0.5rem;
+  list-style-type: none;
+  flex-wrap: nowrap;
+  margin-bottom: 20px;
+}
+
+.carousel-image {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  /* border: 1px solid orange; */
+}
+
+.carousel .carousel-button {
+  height: 32px;
+  width: 32px;
+  border: none;
+  border-radius: 50%;
+  background-color: #fff;
+  cursor: pointer;
+  /* border: 2px solid red; */
+  z-index: 1;
+}
+
+.carousel .carousel-btn-left {
+  position: absolute;
+  top: calc(50%);
+  left: -50px;
+  transform: translateY(-50%);
+  margin-left: 50px;
+}
+
+.carousel .carousel-btn-right {
+  position: absolute;
+  right: -50px;
+  top: calc(50%);
+  transform: translateY(-50%);
+  margin-right: 50px;
+}
+
+.carousel button svg {
+  height: 24px;
+  width: 24px;
+  vertical-align: bottom;
+}
+
+.shoe-container-1 {
+  position: relative;
+  /* border: 2px solid red; */
+}
+
+.left-arrow {
+  position: absolute;
+  background-color: #fff;
+  padding: 10px 10px;
+  border-radius: 50%;
+  margin-left: 60px;
+  top: calc(50% - 12px);
+  z-index: 1;
+}
+
+.left-arrow svg {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.shoe-container-5 {
+  position: relative;
+}
+
+.right-arrow {
+  position: absolute;
+  right: 115px;
+  top: calc(50% - 12px);
+  background-color: #fff;
+  padding: 10px 10px;
+  border-radius: 50%;
+  z-index: 1;
+}
+
+.right-arrow svg {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.nike-membership-header-container {
+  display: none;
+  height: 200px;
+  /* align-items: flex-end; */
+}
+
+.nike-membership-header-container h2 {
+  /*Nike membership header*/
+  font-family: var(--futura-font);
+  font-size: var(--home-pg-header-font-size);
+  letter-spacing: var(--letter-spacing-nike-font);
+  margin-bottom: 20px;
+  margin-left: 45px;
+}
+
+.nike-memebership-img-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  /* 582px */
+  grid-template-rows: 582px;
+  column-gap: 1rem;
+  justify-content: center;
+}
+
+.nike-memebership-img-container img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.membership-product {
+  position: relative;
+}
+
+.membership-product-content {
+  position: absolute;
+  bottom: 0;
+}
+
+.nike-memebership-img-container p {
+  color: #fff;
+}
+
+.nike-memebership-img-container .shoe-header {
+  font-size: 1.5rem;
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+
+.nike-memebership-img-container button {
+  padding: 10px 18px;
+  border: none;
+  border-radius: 50px;
+  font-size: 1rem;
+  background: #fff;
+  cursor: pointer;
+}
+
+.nike-memebership-img-container button:hover {
+  background-color: rgb(185, 185, 185);
+}
+
+.sports-wellness-app {
+  position: relative;
+}
+
+.nike-memebership-img-container .sports-wellness-content {
+  position: absolute;
+  bottom: 0;
+}
+
+.nike-by-you {
+  position: relative;
+}
+
+.nike-by-you .nike-by-you-content {
+  position: absolute;
+  bottom: 0;
+}
+
+.nike-memebership-img-container .inner-container {
+  /* border: 2px solid red; */
+  margin-left: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+/* .home-bottom-list-container {
+  display: grid;
+  grid-template-rows: 50px 450px;
+  grid-template-columns: repeat(4, 184px 48px);
+  list-style-type: none;
+  place-content: center;
+  margin-top: 6rem;
+  margin-bottom: 3.5rem;
+  width: 100%;
+} */
+
+/* .home-bottom-list-container .col1 {
+  border: 1px solid red;
+}
+
+.home-bottom-list-container li a {
+  text-decoration: none;
+  color: #646464;
+}
+
+.home-bottom-list-container .header {
+  color: #000;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+.home-bottom-list-container .list-header {
+  margin-bottom: 2rem;
+  font-weight: bold;
+}
+
+.home-bottom-list-container .child-list {
+  margin-bottom: 1rem;
+}
+
+.home-bottom-list-container .child-list a:hover {
+  color: #000;
+} */
+
+/* START OF TOP FOOTER */
+.footer-container svg {
+  display: none;
+}
+
+.drop-down-footer {
+  width: 100%;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+  padding: 0 50px 0 50px;
+  margin-top: 30px;
+}
+
+.footer-container .content li {
+  list-style: none;
+  text-decoration: none;
+  margin-bottom: 15px;
+}
+
+.footer-container a {
+  text-decoration: none;
+}
+
+.footer-container .list-header {
+  margin: 20px 0 30px 0;
+}
+
+.footer-container .list-header a {
+  color: #000;
+}
+
+.footer-container .list-header a:hover {
+  color: #646464;
+}
+
+.footer-container .content a {
+  color: #646464;
+}
+
+.footer-container .content a:hover {
+  color: #000;
+}
+
+/* START OF BOTTOM FOOTER */
+footer .nike-rights-reserved {
+  display: flex;
+  padding: 48px;
+}
+
+footer .nike-rights-reserved .bottom-footer-list {
+  list-style-type: none;
+  margin-right: 15px;
+  /* border: 1px solid red; */
+}
+
+footer .nike-rights-reserved #guides {
+  display: flex;
+  align-items: flex-start;
+  /* border: 2px solid blue; */
+  margin-left: 20px;
+}
+
+footer .nike-rights-reserved li a {
+  text-decoration: none;
+  color: #646464;
+}
+
+.nike-rights-reserved #copyright {
+  color: #646464;
+}
+
+footer .nike-rights-reserved li a:hover {
+  color: #000;
+}
+
+footer .nike-rights-reserved svg {
+  height: 20px;
+  width: 20px;
+  /* border: 2px solid blue; */
+  z-index: 1;
+  vertical-align: top;
+}
+
+/* The container <div> - needed to position the dropup content */
+footer .drop-down-footer {
+  position: relative;
+  display: inline-block;
+}
+
+/* The container <div> - needed to position the dropup content */
+.nike-rights-reserved .dropup {
+  position: relative;
+  display: inline-block;
+}
+
+.dropup:hover .dropup-content ul li {
+  list-style: none;
+  padding-left: 10px;
+  padding-top: 7.5px;
+  padding-bottom: 7.5px;
+}
+
+.dropup:hover .dropup-content ul li:hover {
+  background-color: #dadada;
+}
+
+.dropup:hover .dropup-content ul li:first-child {
+  margin-top: 5px;
+}
+
+.dropup:hover .dropup-content ul li:last-child {
+  margin-bottom: 5px;
+}
+
+.dropup:hover .dropup-content {
+  overflow: hidden;
+}
+
+.nike-rights-reserved .dropup-content {
+  display: none;
+  position: absolute;
+  border-radius: 2%;
+  bottom: 0;
+  left: -10px;
+  width: 220px;
+  background-color: #fff;
+  box-shadow: 0px 4px 4px 10px rgba(244, 244, 244, 0.2);
+  z-index: 1;
+}
+
+.dropup:hover .dropup-content {
+  display: block;
+}
+
+@media (max-width: 1200px) {
+  .search-input {
+    display: none;
+  }
+
+  .search-icon {
+    left: -42px;
+  }
+  footer .nike-rights-reserved {
+    flex-direction: column;
+    padding-left: 35px;
+  }
+
+  .nike-rights-reserved li {
+    padding-bottom: 8px;
+  }
+
+  footer .nike-rights-reserved #guides {
+    margin-left: 0;
+  }
+
+  .footer-container {
+    list-style-type: none;
+    flex-direction: column;
+    padding: 0 35px 0 3px;
+  }
+
+  .footer-container ul {
+    margin-left: 35px;
+  }
+
+  .footer-container .list-header {
+    /* border: 1px solid blue; */
+    margin: 35px 0 10px 35px;
+  }
+
+  .footer-container .list-header a {
+    color: #000;
+    font-size: 1.1rem;
+  }
+
+  .footer-container .list-header a:hover {
+    cursor: pointer;
+    color: #646464;
+  }
+
+  .footer-container li {
+    list-style-type: none;
+  }
+
+  .footer-container li a {
+    text-decoration: none;
+    cursor: pointer;
+    color: #646464;
+  }
+
+  .footer-container li a:hover {
+    text-decoration: none;
+    color: #000;
+  }
+
+  .footer-container svg {
+    height: 20px;
+    width: 20px;
+    vertical-align: top;
+    z-index: 1;
+  }
+
+  .footer-container .child-list {
+    margin-bottom: 5px;
+  }
+
+  .resource-dropdown,
+  .help-dropdown,
+  .company-dropdown,
+  .promo-dropdown {
+    position: relative;
+    width: fit-content;
+  }
+
+  .footer-container .content li {
+    padding: 5px 0 5px 0;
+  }
+
+  .footer-container .content a {
+    margin-left: 5px;
+  }
+
+  .footer-container .resource-content {
+    visibility: hidden;
+    opacity: 0;
+    position: absolute;
+    left: 0px;
+    top: 55px;
+    background-color: #fff;
+    border-radius: 5%;
+    min-width: 240px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    transition: top 0.3s ease-in, opacity 0.3s ease-in-out, visibility 0.3s;
+    z-index: 2;
+    display: none;
+    flex-direction: column;
+  }
+
+  .resource-dropdown:hover .resource-content,
+  .help-dropdown:hover .help-content,
+  .company-dropdown:hover .company-content,
+  .promo-dropdown:hover .promo-discount-content {
+    opacity: 1;
+    display: flex;
+    visibility: visible;
+  }
+
+  .footer-container .help-content,
+  .footer-container .company-content,
+  .footer-container .promo-discount-content {
+    visibility: hidden;
+    opacity: 0;
+    position: absolute;
+    left: 0px;
+    background-color: #fff;
+    border-radius: 5%;
+    min-width: 240px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    transition: top 0.3s ease-in, opacity 0.3s ease-in-out, visibility 0.3s;
+    z-index: 2;
+    display: none;
+    flex-direction: column;
+  }
+
+  .footer-container .us img {
+    vertical-align: bottom;
+  }
+}
+
+@media (max-width: 960px) {
+  .top-menu {
+    display: none;
+  }
+  .bottom-menu-center {
+    display: none;
+  }
+  :root {
+    --padding-nav: 0 35px;
+  }
+  .hamburger-menu {
+    display: flex;
+  }
+}
+
+@media (max-width: 768px) {
+  .main-quad-img-grid {
+    --num-cols: 1;
+    --num-rows: 4;
+    grid-template-rows: repeat(var(--num-rows), 1fr);
+  }
+
+  .main-image-info-container {
+    justify-content: center;
+    transform: translateY();
+  }
+
+  .main-image-info-container h1 {
+    margin-top: 0;
+    font-size: 3rem;
+  }
+
+  .new-this-week-container {
+    justify-content: center;
+  }
+
+  .new-this-week-content {
+    margin-bottom: 0;
+  }
+
+  .nike-membership-header-container h2 {
+    /*Nike membership header*/
+    justify-content: center;
+  }
+
+  .nike-memebership-img-container {
+    display: flex;
+    flex-direction: column;
+  }
+}
