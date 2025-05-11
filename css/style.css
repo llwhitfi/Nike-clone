@@ -1,6 +1,6 @@
 @font-face {
-  font-family: "Futura"; /* Name your font family */
-  src: url("./Fonts/FuturaCondensedExtraBold.otf") format("opentype"); /* Locate the .otf file within your directory*/
+  font-family: "Futura"; /* Name of font family */
+  src: url("./Fonts/FuturaCondensedExtraBold.otf") format("opentype"); /* Location of the .otf file within directory*/
 }
 
 * {
